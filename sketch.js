@@ -12,7 +12,9 @@ function setup() {
   createCanvas(800, 800);
   engine = Engine.create();
   world = engine.world;
-  ground = new Ground(width/2,height,width,20);
+ 
+  
+  //create ground
 
 
    for (var k = 0; k <=width; k = k + 80) {
@@ -34,9 +36,14 @@ function setup() {
 function draw() {
   background("black");
   textSize(20)
- //text("Score : "+score,20,30);
+  text("Score : "+score,20,30);
+  
   Engine.update(engine);
-  ground.display();
+
+  
+  //display ground
+  
+  
   
    for (var i = 0; i < plinkos.length; i++) {
      
